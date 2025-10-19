@@ -118,7 +118,7 @@ function showContactSuccessModal(contactData) {
             <div class="quick-contact">
                 <p>Need immediate assistance?</p>
                 <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem;">
-                    <a href="tel:+15551234567" class="btn btn-primary">
+                    <a href="tel:+201278954279" class="btn btn-primary">
                         <i class="fas fa-phone"></i> Call Us
                     </a>
                     <a href="https://wa.me/1234567890" class="btn btn-success" target="_blank">
