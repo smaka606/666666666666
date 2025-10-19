@@ -1,16 +1,37 @@
 // Global App Functionality
 class App {
     constructor() {
+        this.products = [];
         this.init();
     }
 
-    init() {
+    async init() {
+        await this.loadProducts();
         this.initializeComponents();
         this.setupEventListeners();
         this.updateCartBadge();
         this.setupMobileMenu();
         this.setupSearch();
         this.setupScrollEffects();
+    }
+
+    async loadProducts() {
+        try {
+            // Try to load from localStorage first
+            let products = this.getFromStorage('products');
+
+            if (!products) {
+                // Generate demo products if not in storage
+                products = generateDemoProducts();
+                this.setToStorage('products', products);
+            }
+
+            this.products = products;
+            return products;
+        } catch (error) {
+            console.error('Error loading products:', error);
+            return [];
+        }
     }
 
     setupEventListeners() {
@@ -620,7 +641,7 @@ function initHomePage() {
 
 async function loadFeaturedProducts() {
     try {
-        const products = await loadProducts();
+        const products = await app.loadProducts();
         const featured = products.filter(p => p.featured).slice(0, 8);
         const container = document.getElementById('featured-products');
         
@@ -630,6 +651,108 @@ async function loadFeaturedProducts() {
     } catch (error) {
         console.error('Error loading featured products:', error);
     }
+}
+
+function generateDemoProducts() {
+    const categories = ['medicines', 'wellness', 'personal-care', 'devices'];
+    const brands = ['PharmaCorp', 'HealthPlus', 'MediMax', 'WellCare', 'VitaLife', 'CarePlus', 'MediCore', 'LifeScience'];
+
+    const productNames = {
+        medicines: [
+            'أسبرين 100 مجم', 'إيبوبروفين 200 مجم', 'باراسيتامول 500 مجم', 'أموكسيسيلين 250 مجم',
+            'ميتفورمين 500 مجم', 'ليسينوبريل 10 مجم', 'أتورفاستاتين 20 مجم', 'أوميبرازول 20 مجم',
+            'أملوديبين 5 مجم', 'ليفوثيروكسين 50 مكجم', 'ميتوبرولول 25 مجم', 'هيدروكلوروثيازيد 25 مجم',
+            'جابابنتين 300 مجم', 'بريدنيزون 10 مجم', 'بخاخ ألبوتيرول', 'إنسولين جلارجين'
+        ],
+        wellness: [
+            'فيتامين د 3 1000 وحدة دولية', 'زيت السمك أوميغا 3', 'كربونات الكالسيوم', 'فيتامينات متعددة بلس',
+            'مسحوق بروتين الفانيليا', 'بروتين مصل اللبن المعزول بالشوكولاتة', 'مشروب طاقة BCAA',
+            'مستخلص الشاي الأخضر', 'الكركمين', 'بروبيوتيك يومي', 'ببتيدات الكولاجين',
+            'مركب المغنيسيوم', 'فيتامين ب 12', 'مكمل حديد', 'أقراص زنك',
+            'CoQ10 100 مجم', 'بيوتين 5000 مكجم', 'فيتامين سي 1000 مجم', 'ميلاتونين 3 مجم'
+        ],
+        'personal-care': [
+            'لوشن مرطب', 'واقي شمسي SPF 50', 'سيروم مضاد للشيخوخة', 'كريم فيتامين سي',
+            'غسول وجه لطيف', 'شامبو لنمو الشعر', 'غسول جسم للبشرة الحساسة', 'معقم لليدين',
+            'مرطب شفاه SPF 15', 'كريم العين', 'جل علاج حب الشباب', 'تونر مرطب',
+            'لوشن للجسم', 'مزيل عرق', 'معجون أسنان مبيض', 'غسول فم مطهر'
+        ],
+        devices: [
+            'ترمومتر رقمي', 'جهاز قياس ضغط الدم', 'طقم قياس السكر',
+            'مقياس التأكسج النبضي', 'جهاز استنشاق', 'وسادة تدفئة كهربائية', 'طقم إسعافات أولية',
+            'ميزان رقمي', 'سماعة طبية', 'شرائط اختبار سكر الدم', 'جوارب ضاغطة',
+            'منظم حبوب الدواء', 'كمادة ثلج', 'ضمادة مرنة', 'سوار قياس ضغط الدم الرقمي'
+        ]
+    };
+
+    const realProducts = {
+        'أسبرين 100 مجم': { price: 78.00, image: 'https://www.bloompharmacy.com/cdn/shop/products/aspirin-protect-100-mg-30-tablets-880111.jpg?v=1691500242' },
+        'إيبوبروفين 200 مجم': { price: 29.00, image: 'http://egyptiandrugstore.com/image/cache/data/manar13/brufen%20200-500x500.png' },
+        'باراسيتامول 500 مجم': { price: 22.00, image: 'http://egyptiandrugstore.com/image/cache/data/MANAR23/PARACETAMOL-500x500.png' },
+        'أموكسيسيلين 250 مجم': { price: 28.00, image: 'http://egyptiandrugstore.com/image/cache/data/MANAR%2020/IBIAMOX%20500-400x400.png' },
+        'ميتفورمين 500 مجم': { price: 8.00, image: 'http://egyptiandrugstore.com/image/cache/data/manar9/cidophage%20500-400x400.png' },
+        'ليسينوبريل 10 مجم': { price: 51.00, image: 'http://egyptiandrugstore.com/image/cache/data/MANAR23/LISINOPRIL-400x400.png' },
+        'فيتامين د 3 1000 وحدة دولية': { price: 200.00, image: 'https://shop.pharmaemarket.com/pharma/medias/0000100137-00-2023-08-28-14-11-23-0-515Wx515H?context=bWFzdGVyfGltYWdlc3w0MDIxOXxpbWFnZS9qcGVnfGFETXpMMmd6T0M4NE5qTXdOVEF3TWpVM056azBMM2h3YjJzdVkyOXRMMk55WldGMFpYTXZNVFk1TnpRNU1ETXlOekF6WHpFeU1EQXdNQzVwY21sZmFXUWdPRFE0T0RBMU16TXhNREp3V1M1M1pXeHpaWElnYzNSaGJpQjdZWGc' },
+        'زيت السمك أوميغا 3': { price: 135.00, image: 'https://www.bloompharmacy.com/cdn/shop/products/omega-3-plus-30-capsules-800425.jpg?v=1687731304' },
+        'لوشن مرطب': { price: 534.75, image: 'https://www.bloompharmacy.com/cdn/shop/products/cerave-moisturizing-lotion-236ml-702103.jpg?v=1687732229' },
+        'واقي شمسي SPF 50': { price: 275.00, image: 'https://cairomegastore.com/wp-content/uploads/2023/06/Sunscreen-Gel-Extra-Lightening-SPF-50-Anti-dark-spots-50gm.webp' },
+        'ترمومتر رقمي': { price: 80.00, image: 'https://qasrelteb.com/wp-content/uploads/2021/04/1-30.jpg' },
+        'جهاز قياس ضغط الدم': { price: 2999.00, image: 'https://www.bloompharmacy.com/cdn/shop/products/beurer-bm-28-upper-arm-blood-pressure-227973.jpg?v=1687635069' }
+    };
+
+    const products = [];
+    let id = 1;
+
+    categories.forEach(category => {
+        productNames[category].forEach(name => {
+            const realProduct = realProducts[name];
+            const basePrice = realProduct ? realProduct.price : Math.random() * 500 + 10;
+            const hasDiscount = Math.random() > 0.8;
+            const discount = hasDiscount ? Math.random() * 0.3 + 0.1 : 0;
+
+            products.push({
+                id: id++,
+                title: name,
+                brand: brands[Math.floor(Math.random() * brands.length)],
+                category: category,
+                price: parseFloat((basePrice * (1 - discount)).toFixed(2)),
+                originalPrice: hasDiscount ? parseFloat(basePrice.toFixed(2)) : null,
+                discount: hasDiscount ? Math.round(discount * 100) : 0,
+                image: realProduct ? realProduct.image : getProductImage(category),
+                description: `منتج عالي الجودة ${name.toLowerCase()} من ${brands[Math.floor(Math.random() * brands.length)]}. موثوق به من قبل متخصصي الرعاية الصحية في جميع أنحاء العالم.`,
+                inStock: Math.random() > 0.1,
+                prescription: category === 'medicines' && Math.random() > 0.6,
+                featured: Math.random() > 0.8,
+                rating: parseFloat((Math.random() * 2 + 3).toFixed(1)),
+                reviews: Math.floor(Math.random() * 1000) + 5,
+                tags: generateTags(category, name)
+            });
+        });
+    });
+
+    return products;
+}
+
+function generateTags(category, name) {
+    const commonTags = {
+        medicines: ['pain relief', 'health', 'medicine', 'prescription'],
+        wellness: ['supplement', 'nutrition', 'vitamin', 'health'],
+        'personal-care': ['skincare', 'beauty', 'personal', 'care'],
+        devices: ['medical', 'device', 'health', 'monitoring']
+    };
+
+    return commonTags[category] || ['health'];
+}
+
+function getProductImage(category) {
+    const images = {
+        medicines: 'https://images.pexels.com/photos/3683051/pexels-photo-3683051.jpeg',
+        wellness: 'https://images.pexels.com/photos/4173624/pexels-photo-4173624.jpeg',
+        'personal-care': 'https://images.pexels.com/photos/4465829/pexels-photo-4465829.jpeg',
+        devices: 'https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg'
+    };
+
+    return images[category] || images.medicines;
 }
 
 // Global helper functions

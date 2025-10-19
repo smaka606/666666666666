@@ -374,7 +374,7 @@ function showOrderSuccessModal(orderData) {
             <div class="contact-support">
                 <p>Questions about your order?</p>
                 <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem;">
-                    <a href="tel:+15551234567" class="btn btn-outline">
+                    <a href="tel:+201278954279" class="btn btn-outline">
                         <i class="fas fa-phone"></i> Call Us
                     </a>
                     <a href="https://wa.me/1234567890?text=Order%20${orderData.id}" class="btn btn-success" target="_blank">
