@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "question": "What are your store hours?",
+    "answer": "Our stores are open Monday-Friday 8 AM to 10 PM, and weekends 9 AM to 9 PM. Online ordering is available 24/7.",
+    "keywords": ["hours", "time", "open", "close", "schedule"]
+  },
+  {
+    "id": 2,
+    "question": "Do you offer home delivery?",
+    "answer": "Yes! We offer same-day delivery in most areas. Free delivery on orders over $50. You can track your order in real-time.",
+    "keywords": ["delivery", "shipping", "home", "free", "track"]
+  },
+  {
+    "id": 3,
+    "question": "How do I upload a prescription?",
+    "answer": "You can upload your prescription by clicking 'Upload Prescription' in the menu. Take a clear photo or upload a PDF file. Our pharmacist will verify it within 2 hours.",
+    "keywords": ["prescription", "upload", "rx", "medicine", "doctor"]
+  },
+  {
+    "id": 4,
+    "question": "What payment methods do you accept?",
+    "answer": "We accept all major credit cards, debit cards, UPI, net banking, and cash on delivery. All payments are secure and encrypted.",
+    "keywords": ["payment", "pay", "card", "cash", "upi", "money"]
+  },
+  {
+    "id": 5,
+    "question": "Can I return or exchange products?",
+    "answer": "Yes, we have a 30-day return policy for unopened products. Prescription medicines cannot be returned for safety reasons. Contact us for return assistance.",
+    "keywords": ["return", "exchange", "refund", "policy", "back"]
+  },
+  {
+    "id": 6,
+    "question": "How can I track my order?",
+    "answer": "You can track your order by logging into your account and visiting the 'My Orders' section. You'll also receive SMS and email updates.",
+    "keywords": ["track", "order", "status", "delivery", "where"]
+  },
+  {
+    "id": 7,
+    "question": "Do you have a loyalty program?",
+    "answer": "Yes! Join our MediCare Rewards program to earn points on every purchase. Points can be redeemed for discounts on future orders.",
+    "keywords": ["loyalty", "rewards", "points", "discount", "program"]
+  },
+  {
+    "id": 8,
+    "question": "Is my personal information secure?",
+    "answer": "Absolutely! We use industry-standard encryption to protect your data. Your prescription and personal information are kept strictly confidential.",
+    "keywords": ["secure", "privacy", "safe", "data", "information", "confidential"]
+  }
+]

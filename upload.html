@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رفع الوصفة الطبية - صيدلية ميديكير</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>صيدلية ميديكير</span>
+                    </a>
+                </div>
+                
+                <div class="nav-search">
+                    <input type="text" placeholder="ابحث عن الأدوية ومنتجات الرعاية الصحية..." id="header-search">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="nav-links">
+                    <a href="products.html">المنتجات</a>
+                    <a href="offers.html">العروض</a>
+                    <a href="upload.html" class="active">رفع الوصفة الطبية</a>
+                    <a href="branches.html">الفروع</a>
+                    <a href="contact.html">اتصل بنا</a>
+                </div>
+                
+                <div class="nav-actions">
+                    <a href="cart.html" class="cart-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-badge" id="cart-badge">0</span>
+                    </a>
+                    <a href="account.html" class="account-link">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <button class="menu-toggle" id="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="upload-section">
+                <div class="upload-header">
+                    <h1>رفع الوصفة الطبية</h1>
+                    <p>ارفع وصفتك الطبية واحصل على أدويتك حتى باب منزلك</p>
+                </div>
+
+                <div class="upload-layout">
+                    <div class="upload-main">
+                        <div class="upload-form-container">
+                            <form class="prescription-form" id="prescription-form">
+                                <div class="upload-area" id="upload-area">
+                                    <div class="upload-content">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                        <h3>اسحب وصفتك الطبية هنا</h3>
+                                        <p>أو انقر لتصفح الملفات</p>
+                                        <div class="upload-buttons">
+                                            <input type="file" id="file-input" accept="image/*,.pdf" multiple hidden>
+                                            <button type="button" class="btn btn-primary" onclick="document.getElementById('file-input').click()">
+                                                <i class="fas fa-folder"></i> تصفح الملفات
+                                            </button>
+                                            <button type="button" class="btn btn-secondary" id="camera-btn">
+                                                <i class="fas fa-camera"></i> التقط صورة
+                                            </button>
+                                        </div>
+                                        <small>الصيغ المدعومة: JPG, PNG, PDF (بحد أقصى 5 ميجابايت لكل ملف)</small>
+                                    </div>
+                                </div>
+
+                                <div class="uploaded-files" id="uploaded-files">
+                                    <!-- سيتم عرض الملفات المرفوعة هنا -->
+                                </div>
+
+                                <div class="patient-info">
+                                    <h3>معلومات المريض</h3>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="patient-name">اسم المريض *</label>
+                                            <input type="text" id="patient-name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="patient-age">العمر *</label>
+                                            <input type="number" id="patient-age" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="patient-phone">رقم الهاتف *</label>
+                                            <input type="tel" id="patient-phone" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="patient-email">البريد الإلكتروني</label>
+                                            <input type="email" id="patient-email">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="delivery-address">عنوان التوصيل *</label>
+                                        <textarea id="delivery-address" rows="3" required></textarea>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="special-instructions">تعليمات خاصة</label>
+                                        <textarea id="special-instructions" rows="2" placeholder="أي تعليمات محددة للصيدلي ..."></textarea>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="delivery-time">وقت التوصيل المفضل</label>
+                                        <select id="delivery-time">
+                                            <option value="">اختر الوقت المفضل</option>
+                                            <option value="morning">صباحًا (8 صباحًا - 12 ظهرًا)</option>
+                                            <option value="afternoon">بعد الظهر (12 ظهرًا - 6 مساءً)</option>
+                                            <option value="evening">مساءً (6 مساءً - 9 مساءً)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-success">
+                                        <i class="fas fa-paper-plane"></i> إرسال الوصفة الطبية
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="upload-sidebar">
+                        <div class="info-card">
+                            <h3>كيف يعمل</h3>
+                            <ol>
+                                <li>
+                                    <i class="fas fa-upload"></i>
+                                    <div>
+                                        <strong>ارفع</strong>
+                                        <p>ارفع صورًا واضحة لوصفتك الطبية</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-user-md"></i>
+                                    <div>
+                                        <strong>تحقق</strong>
+                                        <p>سيقوم الصيدلي بالتحقق من الوصفة الطبية</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <div>
+                                        <strong>اطلب</strong>
+                                        <p>سنتصل بك لتأكيد طلبك ومعالجته</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-shipping-fast"></i>
+                                    <div>
+                                        <strong>توصيل</strong>
+                                        <p>احصل على الأدوية حتى باب منزلك</p>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div class="info-card">
+                            <h3>هل تحتاج إلى مساعدة؟</h3>
+                            <p>صيادلتنا متاحون لمساعدتك</p>
+                            <div class="contact-options">
+                                <a href="tel:+15551234567" class="btn btn-outline">
+                                    <i class="fas fa-phone"></i> اتصل بنا
+                                </a>
+                                <a href="https://wa.me/1234567890" class="btn btn-success" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> واتساب
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <h3>نصائح لصور واضحة</h3>
+                            <ul>
+                                <li>تأكد من وجود إضاءة جيدة</li>
+                                <li>تجنب الظلال والانعكاسات</li>
+                                <li>حافظ على الوصفة الطبية مسطحة</li>
+                                <li>قم بتضمين الوصفة الطبية بأكملها</li>
+                                <li>تأكد من أن النص قابل للقراءة</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>صيدلية ميديكير</h3>
+                    <p>شريكك الموثوق في الرعاية الصحية لأكثر من 20 عامًا.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="products.html">المنتجات</a></li>
+                        <li><a href="offers.html">العروض</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>معلومات الاتصال</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <a href="https://wa.me/1234567890" class="whatsapp-link" target="_blank">
+                            <i class="fab fa-whatsapp"></i> تحدث عبر الواتساب
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 صيدلية ميديكير. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Bot Widget -->
+    <div class="chatbot-widget" id="chatbot-widget">
+        <button class="chatbot-toggle" id="chatbot-toggle">
+            <i class="fas fa-comments"></i>
+        </button>
+        <div class="chatbot-window" id="chatbot-window">
+            <div class="chatbot-header">
+                <h4>دعم ميديكير</h4>
+                <button class="chatbot-close" id="chatbot-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chatbot-messages" id="chatbot-messages"></div>
+            <div class="chatbot-suggestions" id="chatbot-suggestions"></div>
+            <div class="chatbot-input">
+                <input type="text" placeholder="اكتب رسالتك..." id="chatbot-input">
+                <button type="submit" id="chatbot-send">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/upload.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

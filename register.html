@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل - صيدلية ميديكير</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="auth-logo">
+                    <a href="index.html">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>صيدلية ميديكير</span>
+                    </a>
+                </div>
+                <h2>إنشاء حساب</h2>
+                <p>انضم إلى ميديكير لرعاية صحية أفضل</p>
+            </div>
+
+            <form class="auth-form" id="register-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="register-first-name">الاسم الأول</label>
+                        <input type="text" id="register-first-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-last-name">الاسم الأخير</label>
+                        <input type="text" id="register-last-name" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-email">عنوان البريد الإلكتروني</label>
+                    <input type="email" id="register-email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-phone">رقم الهاتف</label>
+                    <input type="tel" id="register-phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-password">كلمة المرور</label>
+                    <div class="password-input">
+                        <input type="password" id="register-password" required>
+                        <button type="button" class="password-toggle" onclick="togglePassword('register-password')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <small class="password-hint">8 أحرف على الأقل مع أحرف كبيرة وصغيرة وأرقام</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirm-password">تأكيد كلمة المرور</label>
+                    <div class="password-input">
+                        <input type="password" id="confirm-password" required>
+                        <button type="button" class="password-toggle" onclick="togglePassword('confirm-password')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="terms-agreement" required>
+                        <span class="checkmark"></span>
+                        أوافق على <a href="#" target="_blank">الشروط والأحكام</a>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="newsletter-signup" checked>
+                        <span class="checkmark"></span>
+                        الاشتراك في النشرة الإخبارية للحصول على نصائح وعروض صحية
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn btn-primary auth-btn">
+                    <i class="fas fa-user-plus"></i> إنشاء حساب
+                </button>
+                
+                <div class="auth-divider">
+                    <span>أو</span>
+                </div>
+                
+                <div class="social-login">
+                    <button type="button" class="btn btn-social google">
+                        <i class="fab fa-google"></i> التسجيل باستخدام جوجل
+                    </button>
+                    <button type="button" class="btn btn-social facebook">
+                        <i class="fab fa-facebook-f"></i> التسجيل باستخدام فيسبوك
+                    </button>
+                </div>
+                
+                <div class="auth-footer">
+                    <p>لديك حساب بالفعل؟ <a href="login.html">تسجيل الدخول</a></p>
+                </div>
+            </form>
+        </div>
+        
+        <div class="auth-image">
+            <img src="https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg" alt="رعاية صحية">
+            <div class="auth-overlay">
+                <h3>انضم إلى عائلتنا للرعاية الصحية</h3>
+                <p>احصل على عروض حصرية وإدارة للوصفات الطبية وخدمات رعاية صحية مخصصة</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

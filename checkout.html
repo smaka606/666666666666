@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدفع - صيدلية ميديكير</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>صيدلية ميديكير</span>
+                    </a>
+                </div>
+                <div class="nav-actions">
+                    <a href="cart.html" class="cart-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-badge" id="cart-badge">0</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="checkout-header">
+                <h1>الدفع</h1>
+                <div class="checkout-steps">
+                    <div class="step active">
+                        <span class="step-number">1</span>
+                        <span class="step-title">العنوان</span>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <span class="step-title">الدفع</span>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <span class="step-title">تأكيد</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkout-layout">
+                <div class="checkout-main">
+                    <form class="checkout-form" id="checkout-form">
+                        <!-- Step 1: Delivery Address -->
+                        <div class="checkout-step" id="step-1">
+                            <h2>عنوان التوصيل</h2>
+                            <div class="form-group">
+                                <label for="full-name">الاسم الكامل *</label>
+                                <input type="text" id="full-name" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">رقم الهاتف *</label>
+                                    <input type="tel" id="phone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">البريد الإلكتروني</label>
+                                    <input type="email" id="email">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="address">عنوان الشارع *</label>
+                                <textarea id="address" rows="3" required></textarea>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">المدينة *</label>
+                                    <input type="text" id="city" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">المحافظة *</label>
+                                    <select id="state" required>
+                                        <option value="">اختر المحافظة</option>
+                                        <option value="CA">القاهرة</option>
+                                        <option value="NY">الجيزة</option>
+                                        <option value="TX">الأسكندرية</option>
+                                        <option value="FL">الدقهلية</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="zipcode">الرمز البريدي *</label>
+                                    <input type="text" id="zipcode" required>
+                                </div>
+                            </div>
+                            
+                            <button type="button" class="btn btn-primary" onclick="nextStep()">
+                                متابعة إلى الدفع
+                            </button>
+                        </div>
+
+                        <!-- Step 2: Payment Method -->
+                        <div class="checkout-step hidden" id="step-2">
+                            <h2>طريقة الدفع</h2>
+                            
+                            <div class="payment-methods">
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="cod" checked>
+                                    <div class="payment-card">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                        <div>
+                                            <h4>الدفع عند الاستلام</h4>
+                                            <p>ادفع عندما تستلم طلبك</p>
+                                        </div>
+                                    </div>
+                                </label>
+                                
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="online">
+                                    <div class="payment-card">
+                                        <i class="fas fa-credit-card"></i>
+                                        <div>
+                                            <h4>الدفع عبر الإنترنت</h4>
+                                            <p>ادفع بأمان باستخدام البطاقة</p>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="prescription-check" id="prescription-check">
+                                <!-- سيتم ملؤها إذا كانت هناك عناصر تتطلب وصفة طبية -->
+                            </div>
+                            
+                            <div class="checkout-actions">
+                                <button type="button" class="btn btn-secondary" onclick="prevStep()">
+                                    العودة إلى العنوان
+                                </button>
+                                <button type="button" class="btn btn-primary" onclick="nextStep()">
+                                    مراجعة الطلب
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Order Confirmation -->
+                        <div class="checkout-step hidden" id="step-3">
+                            <h2>ملخص الطلب</h2>
+                            
+                            <div class="order-review" id="order-review">
+                                <!-- سيتم ملء تفاصيل الطلب هنا -->
+                            </div>
+                            
+                            <div class="checkout-actions">
+                                <button type="button" class="btn btn-secondary" onclick="prevStep()">
+                                    العودة إلى الدفع
+                                </button>
+                                <button type="button" class="btn btn-success" id="place-order">
+                                    <i class="fas fa-check"></i> تأكيد الطلب
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="checkout-sidebar">
+                    <div class="order-summary">
+                        <h3>ملخص الطلب</h3>
+                        <div class="cart-items-summary" id="checkout-cart-items">
+                            <!-- سيتم تحميل ملخص عناصر عربة التسوق هنا -->
+                        </div>
+                        <div class="order-totals" id="order-totals">
+                            <!-- سيتم تحميل إجماليات الطلب هنا -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/app.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المنتجات - صيدلية ميديكير</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>صيدلية ميديكير</span>
+                    </a>
+                </div>
+                
+                <div class="nav-search">
+                    <input type="text" placeholder="ابحث عن الأدوية ومنتجات الرعاية الصحية..." id="header-search">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="nav-links">
+                    <a href="products.html" class="active">المنتجات</a>
+                    <a href="offers.html">العروض</a>
+                    <a href="upload.html">رفع الوصفة الطبية</a>
+                    <a href="branches.html">الفروع</a>
+                    <a href="contact.html">اتصل بنا</a>
+                </div>
+                
+                <div class="nav-actions">
+                    <a href="cart.html" class="cart-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-badge" id="cart-badge">0</span>
+                    </a>
+                    <a href="account.html" class="account-link">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <button class="menu-toggle" id="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1>جميع المنتجات</h1>
+                <div class="view-controls">
+                    <button class="view-toggle active" data-view="grid">
+                        <i class="fas fa-th-large"></i>
+                    </button>
+                    <button class="view-toggle" data-view="list">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="products-layout">
+                <!-- Filters Sidebar -->
+                <aside class="filters-sidebar">
+                    <div class="filters-header">
+                        <h3>الفلاتر</h3>
+                        <button class="clear-filters" id="clear-filters">مسح الكل</button>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>الفئات</h4>
+                        <div class="filter-options" id="category-filters">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="medicines" name="category">
+                                <span class="checkmark"></span>
+                                الأدوية
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="wellness" name="category">
+                                <span class="checkmark"></span>
+                                العافية
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="personal-care" name="category">
+                                <span class="checkmark"></span>
+                                العناية الشخصية
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="devices" name="category">
+                                <span class="checkmark"></span>
+                                الأجهزة الطبية
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>نطاق السعر</h4>
+                        <div class="price-filter">
+                            <input type="range" id="price-slider" min="0" max="500" value="500" step="10">
+                            <div class="price-display">
+                                0 L.E - <span id="price-value">500</span> L.E
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>العلامات التجارية</h4>
+                        <div class="filter-options" id="brand-filters">
+                            <!-- سيتم ملء فلاتر العلامات التجارية بواسطة JS -->
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>يتطلب وصفة طبية</h4>
+                        <div class="filter-options">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="prescription" name="prescription">
+                                <span class="checkmark"></span>
+                                يتطلب وصفة طبية
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="otc" name="prescription">
+                                <span class="checkmark"></span>
+                                بدون وصفة طبية
+                            </label>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Products Grid -->
+                <div class="products-main">
+                    <div class="products-toolbar">
+                        <div class="results-info">
+                            <span id="results-count">جاري تحميل المنتجات...</span>
+                        </div>
+                        <div class="sort-options">
+                            <label for="sort-select">الترتيب حسب:</label>
+                            <select id="sort-select">
+                                <option value="name">الاسم (أ-ي)</option>
+                                <option value="name-desc">الاسم (ي-أ)</option>
+                                <option value="price">السعر (من الأقل إلى الأعلى)</option>
+                                <option value="price-desc">السعر (من الأعلى إلى الأقل)</option>
+                                <option value="popularity">الشعبية</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="products-grid" id="products-grid">
+                        <!-- سيتم تحميل المنتجات هنا -->
+                    </div>
+
+                    <div class="pagination" id="pagination">
+                        <!-- سيتم إنشاء الترقيم بواسطة JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>صيدلية ميديكير</h3>
+                    <p>شريكك الموثوق في الرعاية الصحية لأكثر من 20 عامًا.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="offers.html">العروض</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>معلومات الاتصال</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> info@medicare-pharmacy.com</p>
+                        <a href="https://wa.me/1234567890" class="whatsapp-link" target="_blank">
+                            <i class="fab fa-whatsapp"></i> تحدث عبر الواتساب
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 صيدلية ميديكير. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Bot Widget -->
+    <div class="chatbot-widget" id="chatbot-widget">
+        <button class="chatbot-toggle" id="chatbot-toggle">
+            <i class="fas fa-comments"></i>
+        </button>
+        <div class="chatbot-window" id="chatbot-window">
+            <div class="chatbot-header">
+                <h4>دعم ميديكير</h4>
+                <button class="chatbot-close" id="chatbot-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chatbot-messages" id="chatbot-messages"></div>
+            <div class="chatbot-suggestions" id="chatbot-suggestions"></div>
+            <div class="chatbot-input">
+                <input type="text" placeholder="اكتب رسالتك..." id="chatbot-input">
+                <button type="submit" id="chatbot-send">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

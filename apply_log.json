@@ -1,0 +1,134 @@
+[
+    {
+        "product_id": 1,
+        "old_price": 12.99,
+        "new_price": 78.00,
+        "old_image": "https://images.pexels.com/photos/3683051/pexels-photo-3683051.jpeg",
+        "new_image": "https://www.bloompharmacy.com/cdn/shop/products/aspirin-protect-100-mg-30-tablets-880111.jpg?v=1691500242",
+        "source_urls": "https://www.bloompharmacy.com/products/aspirin-protect-100-mg-30-tablets",
+        "exchange_rate_used": null,
+        "timestamp": "2025-10-14T13:19:10.094117",
+        "operator": "Jules"
+    },
+    {
+        "product_id": 2,
+        "old_price": 8.99,
+        "new_price": 29.00,
+        "old_image": "https://images.pexels.com/photos/3683051/pexels-photo-3683051.jpeg",
+        "new_image": "http://egyptiandrugstore.com/image/cache/data/manar13/brufen%20200-500x500.png",
+        "source_urls": "http://egyptiandrugstore.com/index.php?route=product/product&product_id=1161",
+        "exchange_rate_used": null,
+        "timestamp": "2025-10-14T13:19:52.903413",
+        "operator": "Jules"
+    },
+    {
+        "product_id": 3,
+        "old_price": null,
+        "new_price": 22.00,
+        "old_image": "",
+        "new_image": "http://egyptiandrugstore.com/image/cache/data/MANAR23/PARACETAMOL-500x500.png",
+        "source_urls": "http://egyptiandrugstore.com/index.php?route=product/product&product_id=2621",
+        "exchange_rate_used": null,
+        "timestamp": "2025-10-14T13:21:22.303565",
+        "operator": "Jules"
+    },
+    {
+        "product_id": 4,
+        "old_price": null,
+        "new_price": 28.00,
+        "old_image": "",
+        "new_image": "http://egyptiandrugstore.com/image/cache/data/MANAR%2020/IBIAMOX%20500-400x400.png",
+        "source_urls": "http://egyptiandrugstore.com/index.php?route=product/product&product_id=4651",
+        "exchange_rate_used": null,
+        "timestamp": "2025-10-14T13:22:14.519211",
+        "operator": "Jules"
+    },
+    {
+        "product_id": 5,
+        "old_price": null,
+        "new_price": 8.00,
+        "old_image": "",
+        "new_image": "http://egyptiandrugstore.com/image/cache/data/manar9/cidophage%20500-400x400.png",
+        "source_urls": "http://egyptiandrugstore.com/index.php?route=product/product&product_id=2286",
+        "exchange_rate_used": null,
+        "timestamp": "2025-10-14T13:22:55.069382",
+        "operator": "Jules"
+    },
+    {
+        "product_id": 6,
+        "old_price": null,
+        "new_price": 51.00,
+        "old_image": "",
+        "new_image": "http://egyptiandrugstore.com/image/cache/data/MANAR23/LISINOPRIL-400x400.png",
+        "source_urls": "http://egyptiandrugstore.com/index.php?route=product/product&product_id=2488",
+        "exchange_rate_used": null,
+        "timestamp": "2025-10-14T13:23:36.436518",
+        "operator": "Jules"
+    },
+    {
+        "product_id": 7,
+        "old_price": 18.99,
+        "new_price": 200.00,
+        "old_image": "https://images.pexels.com/photos/4173624/pexels-photo-4173624.jpeg",
+        "new_image": "UNMAPPED",
+        "source_urls": "https://almasrypharmacy.com/supplements-vitamins/vitamin-d-supplements.html",
+        "exchange_rate_used": null,
+        "timestamp": "2025-10-14T13:24:26.281488",
+        "operator": "Jules"
+    },
+    {
+        "product_id": 8,
+        "old_price": null,
+        "new_price": 135.00,
+        "old_image": "",
+        "new_image": "https://www.bloompharmacy.com/cdn/shop/products/omega-3-plus-30-capsules-800425.jpg?v=1687731304",
+        "source_urls": "https://www.bloompharmacy.com/products/omega-3-plus-30-capsules",
+        "exchange_rate_used": null,
+        "timestamp": "2025-10-14T13:25:21.038061",
+        "operator": "Jules"
+    },
+    {
+        "product_id": 9,
+        "old_price": 14.99,
+        "new_price": 534.75,
+        "old_image": "https://images.pexels.com/photos/4465829/pexels-photo-4465829.jpeg",
+        "new_image": "https://www.bloompharmacy.com/cdn/shop/products/cerave-moisturizing-lotion-236ml-702103.jpg?v=1687732229",
+        "source_urls": "https://www.bloompharmacy.com/products/cerave-moisturizing-lotion",
+        "exchange_rate_used": null,
+        "timestamp": "2025-10-14T13:25:48.200883",
+        "operator": "Jules"
+    },
+    {
+        "product_id": 10,
+        "old_price": null,
+        "new_price": 275.00,
+        "old_image": "",
+        "new_image": "https://cairomegastore.com/wp-content/uploads/2023/06/Sunscreen-Gel-Extra-Lightening-SPF-50-Anti-dark-spots-50gm.webp",
+        "source_urls": "https://cairomegastore.com/product-category/skin-care/sun-protection/",
+        "exchange_rate_used": null,
+        "timestamp": "2025-10-14T13:26:15.185661",
+        "operator": "Jules"
+    },
+    {
+        "product_id": 11,
+        "old_price": 29.99,
+        "new_price": 80.00,
+        "old_image": "https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg",
+        "new_image": "https://qasrelteb.com/wp-content/uploads/2021/04/1-30.jpg",
+        "source_urls": "https://qasrelteb.com/en/product/digital-thermometer-medel/",
+        "exchange_rate_used": null,
+        "timestamp": "2025-10-14T13:26:43.076253",
+        "operator": "Jules"
+    },
+    {
+        "product_id": 12,
+        "old_price": null,
+        "new_price": 2999.00,
+        "old_image": "",
+        "new_image": "https://www.bloompharmacy.com/cdn/shop/products/beurer-bm-28-upper-arm-blood-pressure-227973.jpg?v=1687635069",
+        "source_urls": "https://www.bloompharmacy.com/collections/blood-pressure-monitors",
+        "exchange_rate_used": null,
+        "timestamp": "2025-10-14T13:27:17.311187",
+        "operator": "Jules"
+    }
+]

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مواقع الفروع - صيدلية ميديكير</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>صيدلية ميديكير</span>
+                    </a>
+                </div>
+                
+                <div class="nav-search">
+                    <input type="text" placeholder="ابحث عن الأدوية ومنتجات الرعاية الصحية..." id="header-search">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="nav-links">
+                    <a href="products.html">المنتجات</a>
+                    <a href="offers.html">العروض</a>
+                    <a href="upload.html">رفع الوصفة الطبية</a>
+                    <a href="branches.html" class="active">الفروع</a>
+                    <a href="contact.html">اتصل بنا</a>
+                </div>
+                
+                <div class="nav-actions">
+                    <a href="cart.html" class="cart-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-badge" id="cart-badge">0</span>
+                    </a>
+                    <a href="account.html" class="account-link">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <button class="menu-toggle" id="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1>مواقع فروعنا</h1>
+                <p>ابحث عن أقرب فرع لصيدلية ميديكير</p>
+            </div>
+
+            <div class="branches-layout">
+                <div class="branches-main">
+                    <!-- Map Section -->
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12094.57434275373!2d-74.00599644436848!3d40.71627212976338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1619524992238!5m2!1sen!2sus"
+                            width="100%" 
+                            height="400" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                    <!-- Store List -->
+                    <div class="stores-list">
+                        <h2>كل المواقع</h2>
+                        <div class="stores-grid">
+                            <div class="store-card">
+                                <div class="store-info">
+                                    <h3>فرع وسط البلد</h3>
+                                    <p class="store-address">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        123 شارع الصحة, المركز الطبي, نيويورك 10001
+                                    </p>
+                                    <p class="store-phone">
+                                        <i class="fas fa-phone"></i>
+                                        +1 (555) 123-4567
+                                    </p>
+                                    <div class="store-hours">
+                                        <i class="fas fa-clock"></i>
+                                        <div>
+                                            <strong>ساعات العمل:</strong><br>
+                                            الاثنين - الجمعة: 8:00 صباحًا - 10:00 مساءً<br>
+                                            السبت - الأحد: 9:00 صباحًا - 9:00 مساءً
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="store-actions">
+                                    <a href="tel:+15551234567" class="btn btn-primary">
+                                        <i class="fas fa-phone"></i> اتصل
+                                    </a>
+                                    <a href="https://wa.me/1234567890" class="btn btn-success" target="_blank">
+                                        <i class="fab fa-whatsapp"></i> واتساب
+                                    </a>
+                                    <button class="btn btn-outline" onclick="getDirections('123 Health Street, Medical Center, NY 10001')">
+                                        <i class="fas fa-directions"></i> الاتجاهات
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="store-card">
+                                <div class="store-info">
+                                    <h3>فرع أبتاون</h3>
+                                    <p class="store-address">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        456 شارع العافية, المنطقة الصحية, نيويورك 10002
+                                    </p>
+                                    <p class="store-phone">
+                                        <i class="fas fa-phone"></i>
+                                        +1 (555) 234-5678
+                                    </p>
+                                    <div class="store-hours">
+                                        <i class="fas fa-clock"></i>
+                                        <div>
+                                            <strong>ساعات العمل:</strong><br>
+                                            الاثنين - الجمعة: 7:00 صباحًا - 11:00 مساءً<br>
+                                            السبت - الأحد: 8:00 صباحًا - 10:00 مساءً
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="store-actions">
+                                    <a href="tel:+15552345678" class="btn btn-primary">
+                                        <i class="fas fa-phone"></i> اتصل
+                                    </a>
+                                    <a href="https://wa.me/1234567890" class="btn btn-success" target="_blank">
+                                        <i class="fab fa-whatsapp"></i> واتساب
+                                    </a>
+                                    <button class="btn btn-outline" onclick="getDirections('456 Wellness Ave, Health District, NY 10002')">
+                                        <i class="fas fa-directions"></i> الاتجاهات
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="store-card">
+                                <div class="store-info">
+                                    <h3>فرع الضواحي</h3>
+                                    <p class="store-address">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        789 بوليفارد الرعاية, سوبرب بلازا, نيويورك 10003
+                                    </p>
+                                    <p class="store-phone">
+                                        <i class="fas fa-phone"></i>
+                                        +1 (555) 345-6789
+                                    </p>
+                                    <div class="store-hours">
+                                        <i class="fas fa-clock"></i>
+                                        <div>
+                                            <strong>ساعات العمل:</strong><br>
+                                            الاثنين - الجمعة: 8:00 صباحًا - 9:00 مساءً<br>
+                                            السبت - الأحد: 9:00 صباحًا - 8:00 مساءً
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="store-actions">
+                                    <a href="tel:+15553456789" class="btn btn-primary">
+                                        <i class="fas fa-phone"></i> اتصل
+                                    </a>
+                                    <a href="https://wa.me/1234567890" class="btn btn-success" target="_blank">
+                                        <i class="fab fa-whatsapp"></i> واتساب
+                                    </a>
+                                    <button class="btn btn-outline" onclick="getDirections('789 Care Blvd, Suburb Plaza, NY 10003')">
+                                        <i class="fas fa-directions"></i> الاتجاهات
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="branches-sidebar">
+                    <div class="info-card">
+                        <h3>خدمات الفروع</h3>
+                        <ul class="services-list">
+                            <li><i class="fas fa-pills"></i> صرف الوصفات الطبية</li>
+                            <li><i class="fas fa-user-md"></i> استشارة صيدلي</li>
+                            <li><i class="fas fa-syringe"></i> التطعيمات</li>
+                            <li><i class="fas fa-heartbeat"></i> الفحوصات الصحية</li>
+                            <li><i class="fas fa-clipboard-check"></i> مراجعة الأدوية</li>
+                            <li><i class="fas fa-home"></i> توصيل للمنازل</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>الاتصال في حالات الطوارئ</h3>
+                        <p>للوصفات العاجلة أو الطوارئ بعد ساعات العمل:</p>
+                        <div class="emergency-contacts">
+                            <a href="tel:+15551234567" class="emergency-btn">
+                                <i class="fas fa-phone"></i>
+                                الخط الساخن للطوارئ
+                                <span>+1 (555) 123-4567</span>
+                            </a>
+                            <a href="https://wa.me/1234567890" class="emergency-btn whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                دعم واتساب 24/7
+                                <span>متاح 24/7</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>ابحث عن أقرب فرع</h3>
+                        <div class="location-finder">
+                            <input type="text" placeholder="أدخل الرمز البريدي أو العنوان" id="location-input">
+                            <button class="btn btn-primary" onclick="findNearestStore()">
+                                <i class="fas fa-search-location"></i> ابحث عن فروع
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>صيدلية ميديكير</h3>
+                    <p>شريكك الموثوق في الرعاية الصحية لأكثر من 20 عامًا.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="products.html">المنتجات</a></li>
+                        <li><a href="offers.html">العروض</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>معلومات الاتصال</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <a href="https://wa.me/1234567890" class="whatsapp-link" target="_blank">
+                            <i class="fab fa-whatsapp"></i> تحدث عبر الواتساب
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 صيدلية ميديكير. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Bot Widget -->
+    <div class="chatbot-widget" id="chatbot-widget">
+        <button class="chatbot-toggle" id="chatbot-toggle">
+            <i class="fas fa-comments"></i>
+        </button>
+        <div class="chatbot-window" id="chatbot-window">
+            <div class="chatbot-header">
+                <h4>دعم ميديكير</h4>
+                <button class="chatbot-close" id="chatbot-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chatbot-messages" id="chatbot-messages"></div>
+            <div class="chatbot-suggestions" id="chatbot-suggestions"></div>
+            <div class="chatbot-input">
+                <input type="text" placeholder="اكتب رسالتك..." id="chatbot-input">
+                <button type="submit" id="chatbot-send">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/branches.js"></script>
+</body>
+</html>

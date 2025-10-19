@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المنتج - صيدلية ميديكير</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>صيدلية ميديكير</span>
+                    </a>
+                </div>
+                
+                <div class="nav-search">
+                    <input type="text" placeholder="ابحث عن الأدوية ومنتجات الرعاية الصحية..." id="header-search">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="nav-links">
+                    <a href="products.html">المنتجات</a>
+                    <a href="offers.html">العروض</a>
+                    <a href="upload.html">رفع الوصفة الطبية</a>
+                    <a href="branches.html">الفروع</a>
+                    <a href="contact.html">اتصل بنا</a>
+                </div>
+                
+                <div class="nav-actions">
+                    <a href="cart.html" class="cart-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-badge" id="cart-badge">0</span>
+                    </a>
+                    <a href="account.html" class="account-link">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <button class="menu-toggle" id="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="index.html">الرئيسية</a>
+                <span>/</span>
+                <a href="products.html">المنتجات</a>
+                <span>/</span>
+                <span id="breadcrumb-product">تفاصيل المنتج</span>
+            </nav>
+
+            <div class="product-detail" id="product-detail">
+                <!-- سيتم تحميل تفاصيل المنتج هنا -->
+            </div>
+
+            <section class="related-products">
+                <div class="container">
+                    <h2>منتجات ذات صلة</h2>
+                    <div class="products-grid" id="related-products">
+                        <!-- سيتم تحميل المنتجات ذات الصلة هنا -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>صيدلية ميديكير</h3>
+                    <p>شريكك الموثوق في الرعاية الصحية لأكثر من 20 عامًا.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="products.html">المنتجات</a></li>
+                        <li><a href="offers.html">العروض</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>معلومات الاتصال</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <a href="https://wa.me/1234567890" class="whatsapp-link" target="_blank">
+                            <i class="fab fa-whatsapp"></i> تحدث عبر الواتساب
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 صيدلية ميديكير. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Bot Widget -->
+    <div class="chatbot-widget" id="chatbot-widget">
+        <button class="chatbot-toggle" id="chatbot-toggle">
+            <i class="fas fa-comments"></i>
+        </button>
+        <div class="chatbot-window" id="chatbot-window">
+            <div class="chatbot-header">
+                <h4>دعم ميديكير</h4>
+                <button class="chatbot-close" id="chatbot-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chatbot-messages" id="chatbot-messages"></div>
+            <div class="chatbot-suggestions" id="chatbot-suggestions"></div>
+            <div class="chatbot-input">
+                <input type="text" placeholder="اكتب رسالتك..." id="chatbot-input">
+                <button type="submit" id="chatbot-send">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

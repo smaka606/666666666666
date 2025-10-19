@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - صيدلية ميديكير</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>صيدلية ميديكير</span>
+                    </a>
+                </div>
+                
+                <div class="nav-search">
+                    <input type="text" placeholder="ابحث عن الأدوية ومنتجات الرعاية الصحية..." id="header-search">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="nav-links">
+                    <a href="products.html">المنتجات</a>
+                    <a href="offers.html">العروض</a>
+                    <a href="upload.html">رفع الوصفة الطبية</a>
+                    <a href="branches.html">الفروع</a>
+                    <a href="contact.html" class="active">اتصل بنا</a>
+                </div>
+                
+                <div class="nav-actions">
+                    <a href="cart.html" class="cart-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-badge" id="cart-badge">0</span>
+                    </a>
+                    <a href="account.html" class="account-link">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <button class="menu-toggle" id="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1>اتصل بنا</h1>
+                <p>نحن هنا للمساعدة في جميع احتياجات الرعاية الصحية الخاصة بك</p>
+            </div>
+
+            <div class="contact-layout">
+                <div class="contact-main">
+                    <div class="contact-form-container">
+                        <h2>أرسل لنا رسالة</h2>
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name">الاسم الأول *</label>
+                                    <input type="text" id="first-name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name">الاسم الأخير *</label>
+                                    <input type="text" id="last-name" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contact-email">البريد الإلكتروني *</label>
+                                    <input type="email" id="contact-email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-phone">رقم الهاتف</label>
+                                    <input type="tel" id="contact-phone">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">الموضوع *</label>
+                                <select id="subject" required>
+                                    <option value="">اختر موضوعًا</option>
+                                    <option value="general">استفسار عام</option>
+                                    <option value="order">دعم الطلبات</option>
+                                    <option value="prescription">مساعدة بخصوص الوصفة الطبية</option>
+                                    <option value="delivery">مشاكل التوصيل</option>
+                                    <option value="billing">أسئلة الفواتير</option>
+                                    <option value="feedback">ملاحظات</option>
+                                    <option value="other">أخرى</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">الرسالة *</label>
+                                <textarea id="message" rows="6" required placeholder="يرجى تقديم تفاصيل حول استفسارك ..."></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletter" checked>
+                                    <span class="checkmark"></span>
+                                    اشترك في نشرتنا الإخبارية للحصول على نصائح صحية وعروض خاصة
+                                </label>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane"></i> إرسال الرسالة
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="contact-sidebar">
+                    <div class="contact-info-card">
+                        <h3>تواصل معنا</h3>
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h4>الهاتف</h4>
+                                    <p>+1 (555) 123-4567</p>
+                                    <small>الاثنين - الجمعة: 8 صباحًا - 10 مساءً<br>السبت - الأحد: 9 صباحًا - 9 مساءً</small>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>البريد الإلكتروني</h4>
+                                    <p>info@medicare-pharmacy.com</p>
+                                    <small>سنرد في غضون 24 ساعة</small>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>العنوان</h4>
+                                    <p>123 شارع الصحة<br>المركز الطبي, نيويورك 10001</p>
+                                    <small>المقر الرئيسي</small>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <i class="fab fa-whatsapp"></i>
+                                <div>
+                                    <h4>واتساب</h4>
+                                    <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-contact">
+                                        تحدث معنا عبر واتساب
+                                    </a>
+                                    <small>متاح 24/7</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <h3>دعم سريع</h3>
+                        <div class="quick-actions">
+                            <a href="upload.html" class="quick-action">
+                                <i class="fas fa-upload"></i>
+                                <div>
+                                    <h4>رفع الوصفة الطبية</h4>
+                                    <p>احصل على الأدوية حتى باب منزلك</p>
+                                </div>
+                            </a>
+                            
+                            <a href="account.html" class="quick-action">
+                                <i class="fas fa-user"></i>
+                                <div>
+                                    <h4>تتبع الطلب</h4>
+                                    <p>تحقق من حالة الطلب</p>
+                                </div>
+                            </a>
+                            
+                            <a href="branches.html" class="quick-action">
+                                <i class="fas fa-store"></i>
+                                <div>
+                                    <h4>ابحث عن الفروع</h4>
+                                    <p>حدد موقع أقرب فرع</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <h3>دعم الطوارئ</h3>
+                        <p>للأسئلة الطبية العاجلة أو الطوارئ بعد ساعات العمل:</p>
+                        <div class="emergency-contact">
+                            <a href="tel:+15551234567" class="btn btn-danger">
+                                <i class="fas fa-phone"></i> خط الطوارئ
+                            </a>
+                            <small>متاح 24/7 للاحتياجات العاجلة</small>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <h3>تابعنا</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link facebook">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="social-link twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link linkedin">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>صيدلية ميديكير</h3>
+                    <p>شريكك الموثوق في الرعاية الصحية لأكثر من 20 عامًا.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="products.html">المنتجات</a></li>
+                        <li><a href="offers.html">العروض</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>معلومات الاتصال</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <a href="https://wa.me/1234567890" class="whatsapp-link" target="_blank">
+                            <i class="fab fa-whatsapp"></i> تحدث عبر الواتساب
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 صيدلية ميديكير. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Bot Widget -->
+    <div class="chatbot-widget" id="chatbot-widget">
+        <button class="chatbot-toggle" id="chatbot-toggle">
+            <i class="fas fa-comments"></i>
+        </button>
+        <div class="chatbot-window" id="chatbot-window">
+            <div class="chatbot-header">
+                <h4>دعم ميديكير</h4>
+                <button class="chatbot-close" id="chatbot-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chatbot-messages" id="chatbot-messages"></div>
+            <div class="chatbot-suggestions" id="chatbot-suggestions"></div>
+            <div class="chatbot-input">
+                <input type="text" placeholder="اكتب رسالتك..." id="chatbot-input">
+                <button type="submit" id="chatbot-send">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>
